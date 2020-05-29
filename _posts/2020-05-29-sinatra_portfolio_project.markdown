@@ -1,0 +1,8 @@
+---
+layout: post
+title:      "Sinatra Portfolio Project"
+date:       2020-05-29 11:58:47 +0000
+permalink:  sinatra_portfolio_project
+---
+
+So for my sinatra project, i made a website that allows a user to make  review for a game of their choice and allow others to see it. At first when i was looking at references of the file structure and code, i was overwhelmed by the constant back and forth between files. It literally made my eyes and head spin, but eventually i understood how each file went back and forth. I struggled a good bit trying to get the current user id  to display the reviews only for that user, but eventually i found a forum that showed  a "slug" method that i could use in place of it. I was using something along the lines of `"/reviews/current_user.id/view_all` but that was failing, but with the slug method i was able to do `/reviews/<%= current_user.slug %>/view_all` and it worked great. Not entirely sure why its called slug, but it worked. Than i ran into another issue, i was using erb references in post methods in the controllers which caused my website to go crazy. After some investigating on previous work on flatiron and a forum, i discovered that post methods in the controllers should only use redirect and not erb, because it causes issues. Once i fixed that i proceeded to the reviews controller, my last controller to code,  it was annoying at first because of the issue i discussed earlier, but thanks to slug it worked. Afterwards i ended up putting several fail messages for incorrect input in various places and made the website look a little better with buttons instead of blue text everywhere. It was tough, i ran into so many errors but i did it. It's definately not a pretty website, but i'll improve with time.
